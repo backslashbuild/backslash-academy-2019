@@ -1,0 +1,105 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+body {
+  background: #e0e0e0;
+  padding: 40px;
+}
+
+h1,
+h2 {
+  font-weight: 100;
+  font-variant: small-caps;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 10;
+}
+h2 {
+  letter-spacing: 4;
+  font-size: 30px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #333;
+  width: 40px;
+  margin: 20px auto 60px;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  width: calc(100% - 40px);
+}
+
+form {
+  margin: 0;
+  border: 1px solid #aaa;
+  padding: 40px;
+  background: #f0f0f0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+button {
+  color: white;
+  background: #333;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  outline: none;
+  margin: 0;
+}
+button:hover {
+  background: #444;
+}
+
+#submissions {
+  margin-top: 30px;
+  border: 1px solid #aaa;
+  padding: 40px;
+  background: #f0f0f0;
+}
+
+.submission {
+  padding: 10px;
+}
+
+.submission .message {
+  font-size: 16px;
+}
+.submission .name {
+  font-size: 12px;
+  padding-left: 40px;
+  font-style: italic;
+}
+.submission .name::before {
+  content: "― ";
+}

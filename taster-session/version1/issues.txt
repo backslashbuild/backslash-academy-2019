@@ -1,0 +1,4 @@
+1. The state is stored in the DOM - you have to parse the DOM to get it back.
+2. We are using global variables
+3. The code is imperative - we are instructing how to change the state of the DOM, when it is better to declare a new desired state
+4. 

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Backslash Guestbook</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <div class="wrapper">
+    <h1>Backslash Guestbook</h1>
+    <hr />
+
+    <form name="form1" autocomplete="off">
+      <h2>Sign here</h2>
+      <input name="message" placeholder="Write your message" />
+      <input name="name" placeholder="Sign your name" autocomplete="false" />
+      <button>Submit</button>
+    </form>
+    <div id="submissions">
+      <h2>Previous entries</h2>
+      <div id="submissions-content"></div>
+    </div>
+
+    <template id="submission-template">
+      <div class="submission">
+        <div class="message">&ldquo;<span class="message-text"></span>&rdquo;</div>
+        <div class="name"></div>
+      </div>
+    </template>
+  </div>
+
+  <script src="./script.js"></script>
+</html>
