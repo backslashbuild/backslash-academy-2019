@@ -12,7 +12,7 @@ LTS is fine.
 Serve and CRA:
 `npm install --global serve create-react-app`
 
-# Recommendations
+### Recommendations
 
 Prettier and Prettier for VS Code
 
