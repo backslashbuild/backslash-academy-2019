@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function HomePage() {
+function PostPage() {
   const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
@@ -14,11 +13,11 @@ function HomePage() {
 
   return (
     <div>
-      <h1>This is the home page</h1>
+      <h1>This is the post page</h1>
       {posts.map(p => {
         return (
           <div style={{ borderBottom: "1px solid lightgrey", padding: 40 }}>
-            <Link to={`/post/${p.id}`}>{p.title}</Link>
+            {p.title}
             <br />
             <small>
               {p.author} &middot; {p.points} points
@@ -30,4 +29,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default PostPage;

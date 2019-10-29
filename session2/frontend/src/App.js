@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import HomePage from "./HomePage";
+import PostPage from "./PostPage";
 
 function App() {
   return (
@@ -14,8 +15,7 @@ function App() {
           <HomePage />
         </Route>
         <Route path="/post/:id">
-          {/* <HomePage /> */}
-          <div>this is the hello route</div>
+          <PostPage />
         </Route>
         <Redirect from="*" to="/" />
       </Switch>
