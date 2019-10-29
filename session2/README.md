@@ -10,8 +10,8 @@
 
 ## setting up the backend:
 
-- inside the backend folder rnu `npm init` and then `npm install --save express cors faker`
-- create a file in the backend folder called `index.js`
+- inside the backend folder run `npm init` and then `npm install --save express cors faker`
+- create a file in the backend folder `package.json` called `index.js`
 - update your backend folder to have the following scripts section
   ```
   {
