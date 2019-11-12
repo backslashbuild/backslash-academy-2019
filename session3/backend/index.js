@@ -64,4 +64,59 @@ app.get("/createtoken", (req, res) => {
   });
 });
 
+let lastId = 0;
+const users = [
+  {
+    id: ++lastId,
+    name: "Steven",
+    username: "stevenb",
+    password: "password"
+  }
+];
+
+app.get("/get-me", requireAuth, (req, res) => {
+  const matchingUser = users.find(u => u.id == req.user);
+  if (matchingUser) {
+    const { id, username, name } = matchingUser;
+
+    return res.send({ id, username, name });
+  }
+
+  res.send(null);
+});
+
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  const matchingUser = users.find(u => u.username == username);
+
+  if (matchingUser && matchingUser.password == password) {
+    res.send({
+      success: true,
+      token: createToken(matchingUser.id)
+    });
+  } else {
+    res.send({ success: false, message: "invalid credentials" });
+  }
+});
+
+app.post("/register", (req, res) => {
+  const { username, name, password } = req.body;
+
+  const matchingUser = users.find(u => u.username == username);
+
+  if (matchingUser) {
+    res.send({ success: false, message: "username is taken" });
+  } else {
+    users.push({
+      username,
+      name,
+      password,
+      id: ++lastId
+    });
+
+    res.send({ success: true });
+  }
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
